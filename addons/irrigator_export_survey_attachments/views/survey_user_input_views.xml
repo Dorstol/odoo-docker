@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_export_survey_attachments" model="ir.actions.act_window">
+        <field name="name">Экспорт вложений опроса</field>
+        <field name="res_model">export.survey.attachment.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="irrigator_export_survey_attachments.view_export_survey_attachment_wizard"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="survey.model_survey_user_input"/>
+        <field name="binding_type">action</field>
+        <field name="context">{}</field>
+    </record>
+</odoo>

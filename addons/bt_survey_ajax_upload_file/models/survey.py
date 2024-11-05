@@ -53,7 +53,9 @@ class SurveyUserInput(models.Model):
         if question.question_type == 'file':
             self.save_line_file(question, old_answers, answer, comment)
         else:
-            super(SurveyUserInput, self).save_lines(question, answer, comment=comment, overwrite_existing=overwrite_existing)
+            super()._save_lines(question, answer, comment=comment, overwrite_existing=overwrite_existing)
+
+
 
     @api.model
     def save_line_file(self, question, old_answers, answer, comment):
